@@ -24,7 +24,7 @@ const FeedbackCard = ({
 }: FeedbackCardProps) => (
 	<motion.div
 		variants={fadeIn("", "spring", index * 0.5, 0.75)}
-		className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full"
+		className="bg-orange-600 p-10 rounded-3xl xs:w-[320px] w-full border shadow-card shadow-orange-700"
 	>
 		<p className="text-white font-black text-[48px]">&quot;</p>
 
@@ -53,8 +53,8 @@ const FeedbackCard = ({
 
 const Feedbacks = () => {
 	return (
-		<div className="mt-12 bg-black-100 rounded-[20px]">
-			<div className="padding bg-tertiary rounded-2xl min-h-[300px]">
+		<div className="mt-12 bg-orange-500 rounded-[20px]">
+			<div className="padding bg-orange-600 rounded-2xl min-h-[300px]">
 				<motion.div variants={textVariant()}>
 					<h2 className="sectionHeadText">Social Profiles</h2>
 					<p className="sectionSubText">
