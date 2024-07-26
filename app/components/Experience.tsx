@@ -15,56 +15,33 @@ type ExperienceCardProps = {
   experience: (typeof experiences)[0];
 };
 
-const ExperienceCard = ({ experience }: ExperienceCardProps) => {
-  console.log(experience);
-  console.log("dirender");
 
-  return (
-    <VerticalTimelineElement
-      contentStyle={{
-        background: "#2300d4",
-        color: "#e90606",
-      }}
-      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
-      date={experience.date}
-      iconStyle={{ background: experience.iconBg }}
-      icon={
-        <div className="flex justify-center items-center w-full h-full">
-          <Image
-            src={experience.icon}
-            width={48}
-            height={48}
-            alt={experience.company_name}
-            className="w-[60%] h-[60%] object-contain"
-          />
-        </div>
-      }
-    >
-      <div>
-        <h3 className="text-black text-[24px] font-bold">{experience.title}</h3>
-        <p
-          className="text-secondary text-[16px] font-semibold"
-          style={{ margin: 0 }}
-        >
-          {experience.company_name}
-        </p>
-      </div>
-
-      <ul className="mt-5 list-disc ml-5 space-y-2">
-        {experience.points.map((point, index) => (
-          <li
-            key={`experience-point-${index}`}
-            className="text-white-100 text-[14px] pl-1 tracking-wider"
-          >
-            {point}
-          </li>
-        ))}
-      </ul>
-    </VerticalTimelineElement>
-  );
-};
+// const ExperienceCard = ({ experience }: any) => {
+//   return (
+//     <div className="bg-orange-600 rounded-lg p-4 mb-8 w-full shadow-md flex">
+//       {/* <div
+//         className="flex-shrink-0 w-16 h-16 rounded-full flex justify-center items-center mr-4"
+//         style={{ background: experience.iconBg }}
+//       >
+//         <Image src={experience.icon} width={48} height={48} alt={experience.company_name} />
+//       </div> */}
+//       <div className="flex flex-col">
+//         <h3 className="text-xl font-bold text-gray-900">{experience.title}</h3>
+//         <p className="text-lg text-gray-600">{experience.company_name}</p>
+//         <p className="text-sm text-gray-400">{experience.date}</p>
+//         <ul className="mt-2 list-disc pl-5 space-y-1 text-gray-700">
+//           {experience.points.map((point, index) => (
+//             <li key={index}>{point}</li>
+//           ))}
+//         </ul>
+//       </div>
+//     </div>
+//   );
+// };
 
 const Experience = () => {
+  console.log({ experiences });
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -76,15 +53,75 @@ const Experience = () => {
         </h2>
       </motion.div>
 
+
       <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
-          {experiences.map((experience, index) => (
-            <ExperienceCard
-              key={`experience-${index}`}
-              experience={experience}
-            />
-          ))}
-        </VerticalTimeline>
+        <div className="timeline">
+          <ul>
+
+            <li>
+              <div className="right_content">
+
+                <div className="bg-orange-600 rounded-lg p-2 mb-8 w-full shadow-md">
+                  {/* <div
+        className="flex-shrink-0 w-16 h-16 rounded-full flex justify-center items-center mr-4"
+        style={{ background: experience.iconBg }}
+      >
+        <Image src={experience.icon} width={48} height={48} alt={experience.company_name} />
+      </div> */}
+                  <div className="flex flex-col w-full items-start">
+                    <h3 className="text-xl font-bold text-white">Finance & Digital Marketing</h3>
+                    <p className="text-lg text-">Sehat 365</p>
+                    <p className="text-sm ">February 2022 - September 2022</p>
+                    <div className="mt-2 flex flex-col list-disc  text-white items-start ">
+                      {/* {experience.points.map((point, index) => (
+                        <li key={index}>{point}</li>
+                      ))} */}                     <p className="text-start">  Collecting Accounts Receivable Data services</p>
+                      <p className="text-start">Creating and Analyzing Social Media Content</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="left_content">
+                <h3>February 2022 </h3>
+              </div>
+            </li>
+            <li>
+              <div className="right_content">
+
+                <div className="bg-orange-600 rounded-lg p-2 mb-8 w-full shadow-md">
+                  {/* <div
+        className="flex-shrink-0 w-16 h-16 rounded-full flex justify-center items-center mr-4"
+        style={{ background: experience.iconBg }}
+      >
+        <Image src={experience.icon} width={48} height={48} alt={experience.company_name} />
+      </div> */}
+                  <div className="flex flex-col w-full items-start">
+                    <h3 className="text-xl font-bold text-white">Fullstack Web Developer</h3>
+                    <p className="text-lg text-">Ganesha Operation (Pusat)</p>
+                    <p className="text-sm ">Oktober 2022 - Present</p>
+                    <div className="mt-2 flex flex-col list-disc  text-white items-start ">
+                      {/* {experience.points.map((point, index) => (
+                        <li key={index}>{point}</li>
+                      ))} */}
+                      <p className="text-start">Develop and maintain web applications and web services</p>
+                      <p className="text-start">Monitor and optimize web application performance</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="left_content">
+                <h3 className="text-orange-600">Oktober 2022 </h3>
+              </div>
+            </li>
+
+
+            <div style={{ clear: "both" }} />
+          </ul>
+        </div>
+
+        {/* {experiences.map((experience, index) => (
+          <ExperienceCard key={index} experience={experience} />
+        ))} */}
       </div>
     </>
   );

@@ -27,8 +27,8 @@ const ProjectCard = ({
   description,
   tags,
   image,
-  source_code_link,
-  netlify_link,
+  // source_code_link,
+  // netlify_link,
 }: ProjectCardProps) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -49,7 +49,7 @@ const ProjectCard = ({
             className="w-full h-full object-cover rounded-2xl"
           />
 
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+          {/* <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <Link
               href={source_code_link}
               target="_blank"
@@ -76,7 +76,7 @@ const ProjectCard = ({
                 className="object-contain"
               />
             </Link>
-          </div>
+          </div> */}
         </div>
 
         <div className="mt-5">

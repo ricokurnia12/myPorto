@@ -20,7 +20,7 @@ const config: Config = {
       },
       colors: {
         // primary: "#050816",
-        primary: "#FCEE4D",
+        primary: "#FFFE33",
         secondary: "#1E293B",
         tertiary: "#151030",
         "black-100": "#100d25",
@@ -34,7 +34,7 @@ const config: Config = {
         xs: "450px",
       },
       backgroundImage: {
-        "hero-pattern": "url('/herobg.webp')",
+        "hero-pattern": "url('https://www.pixelstalk.net/wp-content/uploads/images3/Free-Download-Spongebob-Wallpaper-1080p.jpg')",
       },
     },
   },
@@ -42,16 +42,16 @@ const config: Config = {
     function ({ addUtilities }: any) {
       addUtilities({
         ".text-stroke": {
-          "-webkit-text-stroke": "2px white",
+          "-webkit-text-stroke": "2px rgb(255, 255, 1)",
         },
         ".text-shadow": {
-          "text-shadow": "4px 4px 0 #fff",
+          "text-shadow": "2px 2px 0 rgb(0, 0, 0,1)",
         },
-        ".text-stroke-black": {
-          "-webkit-text-stroke": "2px white",
+        ".text-stroke-white": {
+          "-webkit-text-stroke": "2px rgb(255, 255, 255)",
         },
-        ".text-shadow-black": {
-          "text-shadow": "2px 2px 0 #fff",
+        ".text-shadow-white": {
+          "text-shadow": "2px 2px 0 rgb(255, 255, 255)",
         },
       });
     },

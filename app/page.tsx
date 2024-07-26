@@ -13,17 +13,18 @@ import {
 export default function Home() {
 	return (
 		<div className="relative z-0 bg-primary font-sans">
-			<div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-				<Navbar />
+			<div className="bg-hero-pattern   bg-no-repeat xl:bg-center bg-right-bottom bg-cover xl:bg-fixed ">
+				{/* <Navbar /> */}
 				<Hero />
 			</div>
+
 			<About />
 			<Experience />
-			<Tech />
+			{/* <Tech /> */}
 			<Works />
-			<Feedbacks />
+			{/* <Feedbacks /> */}
 			<div className="relative z-0">
-				<Contact />
+				{/* <Contact /> */}
 				<StarsCanvas />
 			</div>
 		</div>
