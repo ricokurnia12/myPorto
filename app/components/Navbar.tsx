@@ -28,9 +28,8 @@ const Navbar = () => {
   return (
     <nav
       className={`paddingX
-			w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? "bg-primary" : "bg-transparent"
-      }`}
+			w-full flex items-center py-5 fixed top-0 z-20 ${scrolled ? "bg-primary" : "bg-transparent"
+        }`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
@@ -61,9 +60,8 @@ const Navbar = () => {
             // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
             <li
               key={nav.id}
-              className={`${
-                active === nav.title ? "text-orange-600" : "text-slate-800"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              className={`${active === nav.title ? "text-orange-600" : "text-slate-800"
+                } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
               <Link href={`#${nav.id}`}>{nav.title}</Link>
@@ -85,18 +83,16 @@ const Navbar = () => {
           />
 
           <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            className={`${!toggle ? "hidden" : "flex"
+              } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
               {navLinks.map((nav) => (
                 // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-orange-600" : "text-slate-800"
-                  }`}
+                  className={`font-poppins font-medium cursor-pointer text-[16px] ${active === nav.title ? "text-orange-600" : "text-slate-800"
+                    }`}
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(nav.title);

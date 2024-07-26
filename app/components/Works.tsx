@@ -14,11 +14,11 @@ type ProjectCardProps = {
   description: string;
   tags: {
     name: string;
-    color: string;
+    color?: string;
   }[];
   image: string;
-  source_code_link: string;
-  netlify_link: string;
+  // source_code_link: string;
+  // netlify_link: string;
 };
 
 const ProjectCard = ({
